@@ -161,7 +161,7 @@ class App extends Component {
     axios
       .delete(`https://joes-autos.herokuapp.com/api/buyers/${id}`)
       .then(res => {
-        this.setState({ vehiclesToDisplay: res.data.buyers })
+        this.setState({ buyersToDisplay: res.data.buyers })
         toast.success("Buyer removed!")
       })
       .catch(err => toast.error("Could not remove buyer"))
